@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elias Hazboun | Customer Reviews</title>
+  <meta name="description" content="Read real customer reviews for Elias Hazboun at Barbour Hendrick Honda in Greenville, NC." />
+  <style>
+    :root {
+      --bg: #08111f;
+      --bg2: #0f172a;
+      --panel: rgba(255,255,255,0.07);
+      --panel-border: rgba(255,255,255,0.12);
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --white: #ffffff;
+      --gold: #facc15;
+      --blue: #60a5fa;
+      --shadow: 0 20px 50px rgba(0,0,0,.28);
+      --radius: 24px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(96,165,250,.18), transparent 28%),
+        radial-gradient(circle at 100% 0%, rgba(250,204,21,.13), transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 42px 0 20px;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border: 1px solid var(--panel-border);
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: var(--white);
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.02;
+    }
+
+    .sub {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 58ch;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform .18s ease, opacity .18s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: .96;
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: #0f172a;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,.18);
+    }
+
+    .micro {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--white);
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .profile {
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--panel-border);
+      border-radius: 24px;
+      padding: 20px;
+    }
+
+    .profile img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+    }
+
+    .profile h2 {
+      margin: 16px 0 6px;
+      color: var(--white);
+      font-size: 25px;
+    }
+
+    .profile p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--white);
+      font-size: 13px;
+    }
+
+    .section {
+      padding: 18px 0 44px;
+    }
+
+    .section h3 {
+      margin: 0 0 6px;
+      color: var(--white);
+      font-size: clamp(24px, 3vw, 34px);
+    }
+
+    .lead {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .search {
+      flex: 1 1 280px;
+    }
+
+    .search input, .select {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      color: var(--white);
+      font-size: 16px;
+      outline: none;
+    }
+
+    .select {
+      width: auto;
+      min-width: 180px;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 12px;
+    }
+
+    .name {
+      color: var(--white);
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    .stars {
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    .text {
+      color: #f8fafc;
+      font-size: 16px;
+    }
+
+    .text::before {
+      content: "“";
+      font-size: 28px;
+      color: rgba(250,204,21,.92);
+      line-height: 0;
+      vertical-align: -6px;
+      margin-right: 4px;
+    }
+
+    .empty {
+      display: none;
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+    }
+
+    .footer {
+      padding: 10px 0 44px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 960px) {
+      .hero-wrap {
+        grid-template-columns: 1fr;
+      }
+      .reviews {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 24px;
+      }
+      .hero-wrap {
+        padding: 18px;
+        border-radius: 22px;
+      }
+      .stats {
+        grid-template-columns: 1fr;
+      }
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-wrap">
+        <div>
+          <div class="eyebrow">Real customer feedback</div>
+          <h1>See why customers trust Elias Hazboun</h1>
+          <p class="sub">
+            When you work with me, the goal is simple: make the process smooth, easy, and worth your time.
+            These reviews come directly from real customers and show the kind of experience I aim to deliver every day.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#reviews">Read Reviews</a>
+            <a class="btn btn-secondary" href="https://maps.google.com/maps?cid=9673756294760349226" target="_blank" rel="noopener noreferrer">View Google Reviews</a>
+          </div>
+
+          <div class="micro">A clean trust page you can link in your first-contact emails and texts.</div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>33</strong>
+              <span>customer reviews</span>
+            </div>
+            <div class="stat">
+              <strong>5.0★</strong>
+              <span>average rating shown</span>
+            </div>
+            <div class="stat">
+              <strong>Greenville</strong>
+              <span>local client advisor</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="profile">
+          <img src="elias-headshot.avif" alt="Elias Hazboun headshot" />
+          <h2>Elias Hazboun</h2>
+          <p>Client Advisor at Barbour Hendrick Honda</p>
+          <div class="tags">
+            <span class="tag">Easy process</span>
+            <span class="tag">Fast communication</span>
+            <span class="tag">Customer-first</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="reviews">
+      <div class="container">
+        <h3>Customer Reviews</h3>
+        <p class="lead">Search by customer name or keyword to quickly highlight the feedback that builds trust.</p>
+
+        <div class="toolbar">
+          <div class="search">
+            <input id="searchInput" type="text" placeholder="Search reviews by name or keyword..." />
+          </div>
+          <select id="sortSelect" class="select">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="name">Customer name A–Z</option>
+          </select>
+        </div>
+
+        <div id="reviewsGrid" class="reviews"></div>
+        <div id="emptyState" class="empty">No reviews match that search.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Built from your updated review CSV.
+  </footer>
+
+  <script>
+    const reviews = [{"date": "2026-04-04", "name": "Toya Sessoms", "rating": 5, "review": "Check out Elias Hazboun great salesman he blessed me with a new 2026 Honda Civic Sport!!"}, {"date": "2026-04-02", "name": "jessica villeda", "rating": 5, "review": "I had a great experience working with my car salesman Elias Hazboun. From the moment I walked in, he was friendly, patient, and really took the time to understand what I was looking for instead of trying to push me into something I didn’t want. He explained everything clearly, answered all my questions without making me feel rushed, and made the whole process way less stressful than I expected. What stood out the most was how honest and straightforward he was. I felt like he genuinely cared about helping me find the right car, not just making a sale. He also stayed communicative throughout the entire process and made sure everything went smoothly from start to finish. Overall, I’m really happy with my experience and would definitely recommend him to anyone looking for a car. He made what can usually be a stressful process feel easy and actually enjoyable."}, {"date": "2026-02-28", "name": "Samantha Hedgepeth", "rating": 5, "review": "Elias was great to work with!"}, {"date": "2026-02-26", "name": "Areen Sayegh", "rating": 5, "review": "Elias was very helpful! He was very patient and took the time to explain all my options thoroughly and with complete honesty. He recommended options that aligned with what I was looking for , and honestly explained every pro and con of each option. He answered all questions I had with patience and advised me on what’s best I’m very happy with my purchase!"}, {"date": "2026-02-26", "name": "Eric Lancaster", "rating": 5, "review": "In the market for a pilot. In December of 2025 met Elias and his sales manager at the Honda dealership in Greenville. Unable to reach a deal but the sales manager gave me his card and told me to call him anytime. In January of 2026 I started looking again. I went to Raleigh but just couldn’t reach a deal. I Tried my local Honda dealership in Goldsboro and was talked to like they were doing me a favor just to negotiate with me. I then reconnected with the Sales Manager at Hendrick in Greenville and was able to come to a deal over the phone in less than an hour. It was so nice not to have sat all day at the dealership. Once at the dealership paperwork was in order as discussed and the proper paperwork was signed and we were on our way. Elias and his Sales Manager Scott were a pleasure to deal with. I hate I had to leave Goldsboro to feel appreciated. Customer service was great!"}, {"date": "2026-01-30", "name": "Hannah Guthrie", "rating": 5, "review": "If you need help buying a car, go see Elias at Barbour-Hendrick Honda in Greenville! He was incredibly helpful and made the process easy!"}, {"date": "2026-01-25", "name": "Melissa Brantley Warren", "rating": 5, "review": "My husband and I purchased a Pre-Owned Volvo this past weekend from Barbour-Hendrick. We came in open minded about options for our car, and we were greeted with the friendliest face. Elias Hazboun was an absolute phenomenal associate. He was kind, patient, informative, friendly, personable, and an all around perfect associate. We had an easy, fast, and smooth transaction. We were phenomenally pleased with our experience at Barbour-Hendrick Honda and Elias made it perfect for us. Thank you so much for your help! When we asked Elias what he liked about his job, one of the things he told us was that he was able to help people with an important decision in their lives and it was important to him that he was able to help people and support them and he loved doing it. His answer says it all. He was so helpful to us. If you are shopping for a new car at Barbour-Hendrick Honda, ASK FOR ELIAS!"}, {"date": "2026-01-24", "name": "Tresten Warren", "rating": 5, "review": "Elias was great. He did a tremendous job on helping us out and understanding what we wanted. Doesn’t have that typical salesman mindset that everyone hates. Would recommend him time and time again."}, {"date": "2026-01-09", "name": "Lila Vanschoiack", "rating": 5, "review": "Elias Hazboun gave great customer service. Very nice, respectable, and easy to work with!!!"}, {"date": "2026-01-09", "name": "Raena Vanschoiack", "rating": 5, "review": "Very nice.. helpful.. and respectful.. I’ll come back to Elias Hazboun again!!!"}, {"date": "2025-12-03", "name": "Adiamond Moni", "rating": 5, "review": "I worked with Elias Hazboun and he was amazing ! Very understanding, amazing personality and patient ! Made my experience buying my first car amazing and I’m so grateful for him ! Thank you Elias and thank you Barbour Hendricks ! Highly recommend!!!"}, {"date": "2025-11-18", "name": "Lynne Frye", "rating": 5, "review": "This was my second car purchase from this dealership. Salesman Elias Hazboun researched many options and worked with me to find a car that met my budget and and other requirements. The service he provided was exceptional!! I highly recommend him and the dealership."}, {"date": "2025-09-26", "name": "christian R", "rating": 5, "review": "Elias was extremely knowledgeable and very thorough as were other staff members that assisted. I’m huge on attention to detail and they were all over it. The process was smooth and they are willing to work with you to make it happen, Making an ordinarily stressful and painful experience pleasant. The pilot trail sport is an outstanding vehicle in looks, ride and in all other aspects."}, {"date": "2025-08-27", "name": "Billy73", "rating": 5, "review": "Great guy to buy from! Super helpful and knowledgeable on many different models. Thank you! Elias Hazboun."}, {"date": "2025-06-28", "name": "Pamela Barnes", "rating": 5, "review": "My experience was great!. I was treated like a person. They understand my need and came through for me. Thanks for everything from the moment I walked through the door . Elias Cameron and everyone else who made my trip well worth it!!"}, {"date": "2025-06-24", "name": "Dwayne Boyd", "rating": 5, "review": "Elias was very helpful and courteous at Barbour-Hendric Honda in Greenville. I would recommend that if you are interested in a vehicle in that area, go see him. Super guy!"}, {"date": "2025-06-21", "name": "Skylar McClung", "rating": 5, "review": "Elias was AMAZING we’ve been car shopping for 3 days in total and he honestly made it into the best experience and we fell in love with our Odyssey and the price. Brian and Cameron were super sweet as well and made the financing paperwork a breeze! Loved it here!"}, {"date": "2025-06-21", "name": "Andrew W", "rating": 5, "review": "Elias was the perfect Client Advisor for me and my wife, Cameron and Brian were amazing as well"}, {"date": "2025-06-20", "name": "Robert Keeter", "rating": 5, "review": "Elias Hazboun did a great job helping my mother with her purchase. Super patient, sharp and knowledgeable about the product. Easiest car buying experience"}, {"date": "2025-06-14", "name": "Amy Cook", "rating": 5, "review": "I recently bought a new to me car at this dealership and cannot say enough great things about this experience. From the moment that I first reached out to them until the moment I drive the car off the lot, they were great! Very informative, accommodating and professional. My salesman, Elias, was amazing! Kept me informed and checked in me throughout the process. If you are in the market for a new car, you should definitely choose this dealership and go see Elias. Highly recommend!"}, {"date": "2025-06-13", "name": "Virginia McCoy", "rating": 5, "review": "I had a great buying experience with Elias. In and out in quickly."}, {"date": "2025-06-10", "name": "Laura Miller", "rating": 5, "review": "We bought our son’s first car from Barbour-Hendrick Honda earlier this year. We had a great experience, especially with Elias, our sales rep. Elias was knowledgeable, personable and eager to answer any questions we had. They even provided a big red bow for us to borrow for the photo prop! Great experience all the way around!"}, {"date": "2025-05-31", "name": "Shannon Michaels", "rating": 5, "review": "We were windowing shopping today. Just starting to look for a bigger car. We have an HRV. Well looking turned into purchasing. Our new Pilot will be delivered this week. Our salesman was amazing, no pressure at all. Saw what we liked and didn't like in the cars he showed us and we went from there. Come see Elias Hazboun, he will make sure you are happy!"}, {"date": "2025-05-26", "name": "Judy Franks", "rating": 5, "review": "Our thanks to Elias who went above and beyond to make our vehicle purchase a very pleasant “user friendly” experience! * Professional * Knowledgeable * Patient *"}, {"date": "2025-05-23", "name": "Cynthia Johnson", "rating": 5, "review": "We stopped by to look at Honda Pilots and the only new one on the lot that day was the Black Edition but Elias showed us all the features that would be on the trim we were looking for and also looked online to see what colors were available for us in the interior color I was interested in. He answered all of our questions and we decided to think about it. We returned a few days later and the dealership had gotten one in like I was interested it. Elias showed us the vehicle and answered more questions we had and got an answer from someone else that he wasn’t sure about. He was great to work with. Before long we were in with Brian Pierce signing papers while they were getting my new Pilot ready to go. I would recommend Elias if you are interested in a New car. Everyone we had contact with was very friendly."}, {"date": "2025-05-23", "name": "Eli Hvastkovs", "rating": 5, "review": "Elias was great!!"}, {"date": "2025-05-23", "name": "One Love", "rating": 5, "review": "My experience with Barbour Honda was great. Elias and Alex where wonderful a very helpful. Alex took his time to explain everything and answered any questions I asked. So if you ever at Barbour Honda please ask for Alex or Elias. You want be disappointed with their service"}, {"date": "2025-05-17", "name": "Ray Franks", "rating": 5, "review": "Just worked with Elias to purchase our new Honda Pilot Elite. He was very patient with us and did a good job of explaining all the features of our new car. He gave us plenty of time to make our decision about purchasing the car. Elias was not heavy handed at all and sought answers to all our questions."}, {"date": "2025-05-15", "name": "Brittani Copeland", "rating": 5, "review": "Elias Hazboun from Barbour - Hendrick Honda Greenville was the ABSOLUTE best hands down! Thank you soo soo much for everything for this week. We cannot thank you enough for helping us get out of a messy situation and into a better one!!!"}, {"date": "2025-04-27", "name": "Tommy Speight", "rating": 5, "review": "On April 9, 2025. I purchased a Honda Civic LX 2025 from Zach Booth at Barbour -Hendrick Honda in Greenville, NC. Zach is a fellow East Carolina graduate and had everything ready for me when I walked into the dealership. We had already spoken on the phone and I had chosen the vehicle and color that I wanted ahead of time. Zach was very kind and professional and made the process of this purchase extremely easy and pleasant. Since I had already sent him all needed information, I simply had to pay for the vehicle sign a few documents and I was done in just about an hour. Zach, and a fellow sales person named Elias, were even kind enough to put on a few accessories that I brought along with me. I would highly recommend Zach Booth at Barbour-Hendrick Honda in Greenville, if you’re in the market for a great vehicle and superior customer service!"}, {"date": "2025-03-06", "name": "Lauren Jones", "rating": 5, "review": "From the time I walked in to the time I walked out, I had a great experience. Everyone was nice, knowledgeable, and profoundly human. I’ve dealt with my fair share of scummy salesmen, and there are none to be found here. They were honest, straightforward, and reasonable! Elias walked me through the entire process and was an absolute pleasure to work with. Every employee I spoke with was so nice, and I left happy with my new car. They even called me a couple time after to make sure everything was still going smoothly. Great job to this team!"}, {"date": "2025-01-14", "name": "Cashar Evans", "rating": 5, "review": "I recently purchased a vehicle with the assistance of Monte Williams. It was a wonderful experience! He was professional, courteous, knowledgeable and extremely helpful throughout our time together. I would highly recommend him. Definitely a 5 star experience!"}, {"date": "2025-01-14", "name": "Eman Soliman", "rating": 5, "review": "Wonderful service!! Mr. Nidal did a fantastic job!"}];
+
+    function formatDate(dateStr) {
+      const d = new Date(dateStr);
+      if (Number.isNaN(d.getTime())) return dateStr || "";
+      return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+    }
+
+    function stars(rating) {
+      return "★".repeat(rating) + "☆".repeat(Math.max(0, 5 - rating));
+    }
+
+    function sortReviews(items, mode) {
+      const arr = [...items];
+      if (mode === "oldest") {
+        arr.sort((a, b) => new Date(a.date) - new Date(b.date));
+      } else if (mode === "name") {
+        arr.sort((a, b) => a.name.localeCompare(b.name));
+      } else {
+        arr.sort((a, b) => new Date(b.date) - new Date(a.date));
+      }
+      return arr;
+    }
+
+    function render() {
+      const grid = document.getElementById("reviewsGrid");
+      const empty = document.getElementById("emptyState");
+      const q = document.getElementById("searchInput").value.trim().toLowerCase();
+      const mode = document.getElementById("sortSelect").value;
+
+      let filtered = reviews.filter(r =>
+        !q ||
+        r.name.toLowerCase().includes(q) ||
+        r.review.toLowerCase().includes(q)
+      );
+
+      filtered = sortReviews(filtered, mode);
+
+      grid.innerHTML = filtered.map(r => `
+        <article class="card">
+          <div class="card-head">
+            <div class="name">${r.name}</div>
+            <div class="date">${formatDate(r.date)}</div>
+          </div>
+          <div class="stars" aria-label="${r.rating} out of 5 stars">${stars(r.rating)}</div>
+          <div class="text">${r.review}</div>
+        </article>
+      `).join("");
+
+      empty.style.display = filtered.length ? "none" : "block";
+    }
+
+    document.getElementById("searchInput").addEventListener("input", render);
+    document.getElementById("sortSelect").addEventListener("change", render);
+    render();
+  </script>
+</body>
+</html>
